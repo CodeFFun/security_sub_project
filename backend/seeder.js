@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+const bcryptjs = require('bcryptjs');
 
 dotenv.config();
 
@@ -517,9 +518,13 @@ async function seedDatabase() {
         await User.deleteMany({ _id: { $in: [vendorId1, vendorId2, customerId] } });
         console.log('✅ Existing data cleared\n');
 
-        // Create users first
+        // Create users first — hash passwords so they match the bcrypt-based
+        // login flow (login uses bcrypt.compare, so plaintext seeds cannot log in).
         console.log('👥 Creating users...');
-        const users = await User.insertMany(usersData);
+        const usersToInsert = await Promise.all(
+            usersData.map(async (u) => ({ ...u, password: await bcryptjs.hash(u.password, 10) }))
+        );
+        const users = await User.insertMany(usersToInsert);
         console.log(`✅ Created ${users.length} users\n`);
 
         // Create shop categories (universal)
