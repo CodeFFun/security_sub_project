@@ -131,7 +131,7 @@ const usersData = [
         alternateEmail: "ssass@gmail.com",
         fullName: "ram Sharma",
         phoneNumber: "98763192182321",
-        profilePictureUrl: "/uploads/8ca4abea-b242-4568-8ab3-dbc3ccda53fd.jpg",
+        profilePictureUrl: "/uploads/seed-11.png",
     },
     {
         _id: customerId,
@@ -142,7 +142,7 @@ const usersData = [
         alternateEmail: "aloo121@gmail.com",
         fullName: "sddaawwa Sharma",
         phoneNumber: "+977 9840030334",
-        profilePictureUrl: "/uploads/34e24c25-0856-4454-a8bc-869721aecf7c.jpg",
+        profilePictureUrl: "/uploads/seed-12.png",
     },
     {
         _id: vendorId1,
@@ -153,14 +153,18 @@ const usersData = [
     },
 ];
 
-// Sample shop banners from uploads folder
+// Shop banners served from backend/uploads (copied from local screenshots)
 const shopBanners = [
-    "/uploads/09f18778-6a4a-42cd-a1ca-80858b6aa7af.png",
-    "/uploads/155fb0eb-2444-469b-8b13-8c9eff81001b.png",
-    "/uploads/2349a112-6f52-4981-b262-c9bc6022c765.png",
-    "/uploads/34e24c25-0856-4454-a8bc-869721aecf7c.jpg",
-    "/uploads/8ca4abea-b242-4568-8ab3-dbc3ccda53fd.jpg",
-    "/uploads/ac672b1e-215e-4cb4-a864-114f9fa7a85d.jpg",
+    "/uploads/seed-1.png",
+    "/uploads/seed-2.png",
+    "/uploads/seed-3.png",
+    "/uploads/seed-4.png",
+    "/uploads/seed-5.png",
+    "/uploads/seed-6.png",
+    "/uploads/seed-7.png",
+    "/uploads/seed-8.png",
+    "/uploads/seed-9.png",
+    "/uploads/seed-10.png",
 ];
 
 // Shop categories (skilled trades)

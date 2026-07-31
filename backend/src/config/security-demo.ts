@@ -20,14 +20,16 @@
 // When true, public registration trusts a client-supplied `role`, so a user
 // can register directly as "admin". Secure (false) restricts role to
 // customer/shop.
-export const DEMO_ALLOW_PRIV_ESCALATION =
-    process.env.DEMO_ALLOW_PRIV_ESCALATION === "true";
+// Accept true / True / TRUE / 1 (case-insensitive, whitespace-tolerant).
+const isEnabled = (v: string | undefined) =>
+    ["true", "1", "yes", "on"].includes(String(v ?? "").trim().toLowerCase());
+
+export const DEMO_ALLOW_PRIV_ESCALATION = isEnabled(process.env.DEMO_ALLOW_PRIV_ESCALATION);
 
 // Demo #2 — Broken authentication: no brute-force protection.
 // When true, the auth rate limiter is bypassed, allowing unlimited login
 // attempts (password guessing). Secure (false) throttles auth endpoints.
-export const DEMO_DISABLE_RATE_LIMIT =
-    process.env.DEMO_DISABLE_RATE_LIMIT === "true";
+export const DEMO_DISABLE_RATE_LIMIT = isEnabled(process.env.DEMO_DISABLE_RATE_LIMIT);
 
 // Emit a loud startup warning if any insecure demo toggle is active, so it is
 // never left on by accident.

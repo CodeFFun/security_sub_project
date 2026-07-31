@@ -41,10 +41,10 @@ export default function DiscountSection() {
         <div className="flex items-center justify-between mb-8">
           <div>
             <h2 className="text-3xl font-bold text-foreground mb-2">
-              Automatic Restock
+              Recurring Service Plans
             </h2>
             <p className="text-accent font-semibold">
-              Shops that automatically restock your favorite products
+              Providers who keep your home serviced on a recurring schedule
             </p>
           </div>
           <Link href="/customer/shop/allshops">

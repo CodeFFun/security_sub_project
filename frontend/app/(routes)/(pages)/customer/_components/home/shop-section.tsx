@@ -54,13 +54,13 @@ export default function ShopSection() {
     <section className="w-full bg-card py-12">
       <div className="max-w-7xl mx-auto px-8">
         <div className="w-full flex justify-between items-center mb-8">
-        <h2 className="text-3xl font-bold text-foreground mb-8">All Products</h2>
+        <h2 className="text-3xl font-bold text-foreground mb-8">All Service Providers</h2>
         <Link href="/customer/shop/allshops">
           <Button
             variant="outline"
             className="border-accent text-accent hover:bg-accent/10 bg-transparent"
             >
-            SHOP ALL PRODUCTS
+            View ALL Shops
           </Button>
           </Link>
         </div>
